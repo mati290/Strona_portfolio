@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     {% load static %}
@@ -13,25 +12,38 @@
         <h1>Moje Projekty</h1>
     </header>
     
-    <div class ="video-background">
+    <div class="video-background">
         <video autoplay muted loop>
-            <source src="{% static "/video/background_video.mp4"%}" type = "video/mp4">
+            <source src="{% static '/video/background_video_2.mp4' %}" type="video/mp4">
             Your browser does not support the video tag. Please upgrade to a modern browser.
         </video>
     </div>
 
-    <div class = "container">
-        <ul>
-            {% for project in projects %}
-                <li>
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.description }}</p>
-                    <img src = "{{ project.image.url }}" alt="{{project.title}}">
-                    <a href="{{ project.link}}">Zobacz projekt</a>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="container">
+        <div class="projects">
+            <ul>
+                {% for project in projects %}
+                    <li>
+                        <div class="project">
+                            <div class="project-image">
+                                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                            </div>
+                            <div class="project-description">
+                                <h2>{{ project.title }}</h2>
+                                <p>{{ project.description }}</p>
+                                <a href="{{ project.link }}">Zobacz projekt</a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="about-me">
+            <h2>O mnie</h2>
+            <p>Witaj na moim portfolio! Jestem Python Developerem z doświadczeniem w pracy z Django, PostgreSQL oraz innymi technologiami webowymi. Moje projekty koncentrują się na tworzeniu skalowalnych aplikacji internetowych, automatyzacji procesów oraz tworzeniu API. Lubię wyzwania i dążę do ciągłego rozwoju swoich umiejętności.</p>
+        </div>
     </div>
+
 </body>
 </html>
-

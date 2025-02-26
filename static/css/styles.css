@@ -1,92 +1,139 @@
-
-.video-background{
+.video-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index:-1 ;
+    z-index: -1;
 }
 
-video{
+video {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.content{
+.content {
     position: relative;
     z-index: 1;
-    color: #050303;
+    color: #f3f3f3;
     text-align: center;
     padding: 50px;
 }
 
 header {
-    color: rgb(46, 138, 243);
+    color: #4b89e8;
     text-align: center;
-    padding: 20px 0 ;
+    padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
- header h1 {
+header h1 {
     margin: 0;
     font-size: 3em;
+    font-family: 'Arial',sans-serif;
 }
+
 .container {
+    display: flex;
     max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(203, 175, 255, 0.205);
+    background-color: rgba(203, 175, 255, 0.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-
+    flex-wrap: wrap;
 }
 
-ul{
+/*sekcja projektów*/
+
+.projects {
+    flex: 1; /* Zajmuje przestrzeń po lewej stronie */
+    margin-right: 20px;
+}
+
+.about-me {
+    flex: 1; /* Zajmuje przestrzeń po prawej stronie */
+    padding: 20px;
+    background-color: #f9f9f927;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    margin-bottom: 60px ;
-    border-bottom: 2px solid #000000;
+    margin-bottom: 60px;
+    border-bottom: 2px solid #B3b3b3;
     padding-bottom: 30px;
 }
 
-h2{
-    font-size: 1.8em; /* nazwa aplikacji */
-    color: #ffffff;
-
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-p{
-    font-size: 1.5em;   /* opis */
-    color: #000000;
+.project-image {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.project-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.project-description {
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333333;
+}
+
+p {
+    font-size: 1.5em;
+    color: #ff6f61;
     line-height: 2;
-    margin-bottom: 15px;
-}
-
-img{
-    width: 16%;
-    height:15%;
     display: block;
-
-
+    align-items: center;
+    max-width: 500px;
+    margin: 0;
 }
 
-a{ 
-    display:inline-block;    /*przyciski zobacz projekt*/
-    background-color: #fffefe;
-    color:rgb(0, 25, 253);
-    padding: 20px 20px;
+a {
+    display: inline-block;
+    background-color: transparent;
+    color: #4b89e8;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 12px;
     font-size: 2em;
-    transition: background-color 0.3 ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a:hover{
-    background-color: #00000000;
+a:hover {
+    background-color: #4b89e8;
+    color: #ffffff;
 }
 
+.about-me h2 {
+    font-size: 2em;
+    color: #333333;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    color: #555555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
